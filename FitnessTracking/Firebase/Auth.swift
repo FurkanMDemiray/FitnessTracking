@@ -14,8 +14,10 @@ struct UserAuth {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
                 print(error.localizedDescription)
+                NotificationCenter.default.post(name: .showAlertSignUpError, object: error.localizedDescription)
             } else {
                 print("User Created")
+                NotificationCenter.default.post(name: .showAlertSignUp, object: nil)
             }
         }
     }
@@ -24,8 +26,9 @@ struct UserAuth {
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
                 print(error.localizedDescription)
+                NotificationCenter.default.post(name: .showAlertLoginError, object: error.localizedDescription)
             } else {
-                print("User Logged In")
+                NotificationCenter.default.post(name: .showAlertLogin, object: nil)
             }
         }
     }

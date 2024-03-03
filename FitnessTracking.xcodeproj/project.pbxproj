@@ -23,6 +23,7 @@
 		DDA3A97A2B93A6C500A2FAC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA3A9792B93A6C500A2FAC8 /* GoogleService-Info.plist */; };
 		DDB974EB2B948B8700961A53 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB974EA2B948B8700961A53 /* Auth.swift */; };
 		DDB974ED2B948C2600961A53 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB974EC2B948C2600961A53 /* LoginViewModel.swift */; };
+		DDB974F02B94D6EF00961A53 /* NotificationsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB974EF2B94D6EF00961A53 /* NotificationsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		DDA3A9792B93A6C500A2FAC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDB974EA2B948B8700961A53 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		DDB974EC2B948C2600961A53 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DDB974EF2B94D6EF00961A53 /* NotificationsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		DDA3A93A2B93A25100A2FAC8 /* FitnessTracking */ = {
 			isa = PBXGroup;
 			children = (
+				DDB974EE2B94D6D400961A53 /* Extensions */,
 				DDB974E92B948B7500961A53 /* Firebase */,
 				DDA3A96D2B93A29100A2FAC8 /* ViewModels */,
 				DDA3A96C2B93A28900A2FAC8 /* Views */,
@@ -174,6 +177,14 @@
 				DDB974EA2B948B8700961A53 /* Auth.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		DDB974EE2B94D6D400961A53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDB974EF2B94D6EF00961A53 /* NotificationsExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				DDA3A93C2B93A25100A2FAC8 /* AppDelegate.swift in Sources */,
 				DDA3A93E2B93A25100A2FAC8 /* SceneDelegate.swift in Sources */,
 				DDB974ED2B948C2600961A53 /* LoginViewModel.swift in Sources */,
+				DDB974F02B94D6EF00961A53 /* NotificationsExtension.swift in Sources */,
 				DDB974EB2B948B8700961A53 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

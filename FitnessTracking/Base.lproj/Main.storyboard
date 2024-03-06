@@ -11,7 +11,7 @@
         <!--Login View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginView" customModule="FitnessTracking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInView" id="BYZ-38-t0r" customClass="LoginView" customModule="FitnessTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,14 +74,66 @@
                     <connections>
                         <outlet property="emailText" destination="5RA-Q0-ISp" id="mKj-OH-NDm"/>
                         <outlet property="passwordText" destination="vyU-k4-DyP" id="NEq-GF-lFX"/>
+                        <segue destination="c3K-S3-GS8" kind="presentation" identifier="toTabBarVC" modalPresentationStyle="fullScreen" id="gpJ-ah-9kB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="Ji6-mO-52b">
+            <objects>
+                <viewController id="3hz-hx-ZYg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v5U-SK-T0T">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fpP-2a-y5f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Bbf-OZ-gGZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfB-Oq-mTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="268"/>
+        </scene>
+        <!--Exercises-->
+        <scene sceneID="wPE-I0-7PE">
+            <objects>
+                <viewController id="1O1-No-UA0" customClass="ExercisesViewController" customModule="FitnessTracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7S8-Uq-Dix">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0EP-dh-SuS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Exercises" image="dumbell" id="KJK-OX-tI3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsp-us-WGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="-394"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9mN-iT-NBS">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="c3K-S3-GS8" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IEI-rY-HcP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1O1-No-UA0" kind="relationship" relationship="viewControllers" id="Glp-xn-r0Q"/>
+                        <segue destination="3hz-hx-ZYg" kind="relationship" relationship="viewControllers" id="CGw-sK-4Hv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ip2-3C-fdN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="-35"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="dumbell" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

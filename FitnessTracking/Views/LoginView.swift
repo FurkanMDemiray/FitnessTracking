@@ -25,12 +25,14 @@ class LoginView: UIViewController {
         if let email = emailText.text, let password = passwordText.text {
             loginViewModel.signUp(email: email, password: password)
             NotificationCenter.default.addObserver(self, selector: #selector(alertSignUp(_:)), name: .showAlertSignUp, object: nil)
+            performSegue(withIdentifier: "toTabBarVC", sender: nil)
         }
     }
     @IBAction func LogIn(_ sender: Any) {
         if let email = emailText.text, let password = passwordText.text {
             loginViewModel.logIn(email: email, password: password)
             NotificationCenter.default.addObserver(self, selector: #selector(alertLogin(_:)), name: .showAlertLogin, object: nil)
+            performSegue(withIdentifier: "toTabBarVC", sender: nil)
         }
     }
     

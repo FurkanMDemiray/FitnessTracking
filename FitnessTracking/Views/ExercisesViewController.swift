@@ -9,8 +9,11 @@ import UIKit
 
 class ExercisesViewController: UIViewController {
 
+    @IBOutlet weak var btnList: UIButton!
     override func viewDidLoad() {
-        super.viewDidLoad()       
+        super.viewDidLoad()
+        
+        
         
     }
     
